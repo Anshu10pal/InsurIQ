@@ -1,0 +1,37 @@
+[
+  {
+    "query": "suspicious claims no police report external agent urban high vehicle price",
+    "expected_risk_level": "HIGH",
+    "expected_min_score": 70,
+    "expected_signals": ["HIGH_AMOUNT_NO_POLICE_REPORT", "EXTERNAL_AGENT_HIGH_CLAIM"],
+    "description": "Classic high-risk fraud pattern"
+  },
+  {
+    "query": "new policy claims filed within a week of inception",
+    "expected_risk_level": "HIGH",
+    "expected_min_score": 60,
+    "expected_signals": ["NEW_POLICY_QUICK_CLAIM"],
+    "description": "New policy gaming"
+  },
+  {
+    "query": "rural collision police report filed witness present internal agent no prior claims",
+    "expected_risk_level": "LOW",
+    "expected_min_score": 0,
+    "expected_signals": [],
+    "description": "Clean legitimate claim"
+  },
+  {
+    "query": "multiple prior claims address changes near claim no witnesses",
+    "expected_risk_level": "HIGH",
+    "expected_min_score": 65,
+    "expected_signals": ["HIGH_PRIOR_CLAIMS", "MULTIPLE_ADDRESS_CHANGES"],
+    "description": "Repeat fraudster pattern"
+  },
+  {
+    "query": "excess supplements old vehicle high price external agent",
+    "expected_risk_level": "HIGH",
+    "expected_min_score": 60,
+    "expected_signals": ["EXCESS_SUPPLEMENTS", "OLD_VEHICLE_HIGH_PRICE"],
+    "description": "Inflated repair cost pattern"
+  }
+]
